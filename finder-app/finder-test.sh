@@ -50,6 +50,7 @@ do
 	./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
 done
 
+echo "write dir $WRITEDIR and write string $WRITESTR"
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 
 set +e

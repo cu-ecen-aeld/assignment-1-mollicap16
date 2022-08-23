@@ -22,6 +22,7 @@ then
 fi
 
 # Check number of files in the directory and the number of subdirectories
-totalfiles=$( sudo find $1 -type f | wc -l )
-totalmatches=$( sudo find $1 -type f | grep $2 | wc -l )
+totalfiles=$( sudo find $filesdir -type f | wc -l )
+totalmatches=$( sudo grep -r $searchstr $filesdir | wc -l )
 echo "The number of files are $totalfiles and the number of matching lines are $totalmatches"
+echo ""
